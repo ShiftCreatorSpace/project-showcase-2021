@@ -1,7 +1,7 @@
 :root {
   --text-color: #343a40;
   --bg-color: #FFFCF9;
-  --card-color: #F7EFEA;
+  --card-color: #fafafa;
   --accent-color: #4dabf7;
 }
 
@@ -39,11 +39,6 @@ body {
   background-color: var(--bg-color);
 }
 
-h2 {
-  font-size: 2.5em;
-  font-family: "Lora", serif;
-}
-
 a {
   text-decoration: none;
 }
@@ -77,7 +72,7 @@ a {
 }
 
 #intro > img {
-  height: 10rem;
+  height: 7rem;
 }
 
 .vertical-hr {
@@ -87,8 +82,18 @@ a {
   margin: 1rem;
 }
 
-#intro-left {
+#intro-right {
   width: 50%;
+}
+
+#intro-right > h2 {
+  font-size: 3em;
+  font-family: "Lora", serif;
+}
+
+#intro-right > p {
+  font-size: 1.25em;
+  line-height: 1.1;
 }
 
 #project-display {
@@ -103,17 +108,22 @@ a {
   overflow: hidden;
   margin: 2em;
   width: 18rem;
-  height: 20rem;
+  height: 22rem;
   padding: 1em;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
   transform-origin: 50% 50%;
   opacity: 0;
+  max-height: 18rem;
+  margin-bottom: 0rem;
   animation: appear 1s linear forwards;
-  transition: transform 0.25s;
+  transition: transform 0.25s, max-height 0.25s, margin-bottom 0.25s;
 }
 
 .project:hover {
+  z-index: 100;
   transform: scale(1.1) rotate(0deg) translate(0, 0) !important;
+  max-height: 20rem;
+  margin-bottom: -8rem;
 }
 
 .arrow-link {
@@ -136,7 +146,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  background-color: #F7EFEA;
+  background-color: var(--card-color);
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   transition: background-image: 0.25s;
 }
@@ -158,6 +168,10 @@ a {
   text-transform: uppercase;
   opacity: 0.7;
   font-size: 1em;
+}
+
+.project--text > p {
+  margin-top: 1rem;
 }
 
 .wire {
@@ -209,7 +223,7 @@ a {
     width: 60%;
   }
 
-  #intro-left {
+  #intro-right {
     width: 90%;
     text-align: center;
   }
