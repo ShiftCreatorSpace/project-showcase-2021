@@ -1,7 +1,29 @@
 :root {
   --text-color: #343a40;
   --bg-color: #FFFCF9;
+  --card-color: #F7EFEA;
   --accent-color: #4dabf7;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-opacity: 1;
+  }
+  50% {
+    stroke-opacity: 0.2;
+  }
 }
 
 * {
@@ -22,6 +44,20 @@ h2 {
   font-family: "Lora", serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+#main-background {
+  margin-top: 2rem;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#main-background > svg {
+  margin-left: -5vw;
+}
+
 #main-container {
   width: 80%;
   margin: 0 10%;
@@ -31,7 +67,17 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 10rem;
+  padding: 2rem 5rem;
+}
+
+#shift-logo-outer {
+  margin-right: 0.75rem;
+}
+
+.st0, .st1, .st3, .st2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 1s ease-in forwards;
 }
 
 #intro > img {
@@ -50,32 +96,99 @@ h2 {
 }
 
 #project-display {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-column-gap: 3em;
-  grid-row-gap: 3em; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 5% 0 5%;
-  padding-top: 20px;
+  margin: 0 2.5%;
 }
 
 .project {
-  background-color: var(--bg-color);
-  /* max-width: 500px;
-  min-width: 250px;
-  max-height: 500px;
-  min-height: 250px; */
-  /* padding-top: 100%; /* 1:1 Aspect Ratio */
-
+  background-color: var(--card-color);
+  overflow: hidden;
   margin: 2em;
+  width: 18rem;
+  height: 20rem;
+  padding: 1em;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  transform-origin: 50% 50%;
+  opacity: 0;
+  animation: appear 1s linear forwards;
+  transition: transform 0.25s;
+}
 
-  width: 20em;
-  height: 20em;
+.project:hover {
+  transform: scale(1.1) rotate(0deg) translate(0, 0) !important;
+}
 
-  border: 2px solid black;
+.arrow-link {
+  position: absolute !important;
+  bottom: 1rem;
+  right: 1rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  background-color: var(--card-color);
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.25em;
+  border-radius: 100%;
+}
+
+.project--image {
+  width: 100%;
+  height: 14rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.project--text {
+  margin-top: 0.25rem;
+}
+
+.project--text > h4 {
+  font-size: 2em;
+  font-family: "Lora", serif;
+}
+
+.project--text > h5 {
+  text-transform: uppercase;
+  opacity: 0.7;
+  font-size: 1em;
+}
+
+.wire {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: draw 1s ease-in forwards;
+}
+
+.lights {
+  opacity: 0;
+  stroke-dasharray:1px,300px;
+  filter: drop-shadow(10px 0 5px red);
+  animation: dash 3s linear infinite, appear 2s linear forwards;
+}
+
+#lights1 {
+  animation-delay: 1s;
+  stroke-dashoffset: 100px;
+}
+
+#lights2 {
+  animation-delay: 2s;
+  stroke-dashoffset: 200px;
+}
+
+@media only screen and (max-width:1300px) {
+  #intro {
+    padding: 2rem 0;
+  }
+  #main-container {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
 
 @media only screen and (max-width:650px)  {
