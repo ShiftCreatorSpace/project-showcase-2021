@@ -3,75 +3,18 @@
     <title>creator showcase 2020</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
   </head>
-  <style>
-    :root {
-      --text-color: #343a40;
-      --bg-color: ##f1f3f5;
-      --accent-color: #4dabf7;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      font-style: normal;
-      background-color: var(--bg-color);
-    }
-
-    h1,h2,h3,h4,h5,h6,a,span,p {
-      color: var(--bg-color);
-    }
-
-    #main-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 200px 1fr;
-      grid-row-gap: 20px;
-    }
-
-    #intro {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      /* grid-column: 1/-1; */
-      margin: 0px 5% 0px 5%;
-      grid-column-gap: 2em;
-    }
-
-    #project-display {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      grid-column-gap: 3em;
-      grid-row-gap: 3em;
-      margin: 0px 5% 0px 5%;
-      padding-top: 20px;
-    }
-
-    .project {
-      background-color: var(--bg-color);
-      /* max-width: 500px;
-      min-width: 250px;
-      max-height: 500px;
-      min-height: 250px; */
-      width: 100%;
-      padding-top: 100%; /* 1:1 Aspect Ratio */
-      border: 2px solid black;
-    }
-
-    @media only screen and (max-width:450px)  {
-      #project-display {
-        grid-template-columns: 1fr;
-      }
-    }
-
-  </style>
+  <link href="style.css" rel="stylesheet" type="text/css">
   <body>
 
     <div id="main-container">
       <div id="intro">
-        <!-- logo here -->
-        <h2 style="align-self: center; justify-self: end;">Shift Demo Day 2020</h2>
-        <div style="align-self: center; justify-self: start;">
+        <img src="assets/combined.png" />
+        <div class="vertical-hr"></div>
+        <div id="intro-left">
           <h2>Project Showcase 2020</h2>
           <p>We can have a little description here about the projects and what everything is and maybe a little about what Shift is as well.</p>
         </div>
@@ -79,10 +22,8 @@
       </div>
 
       <div id="project-display">
-        <!-- only 1 column for mobile -->
-        <!-- use classes for all style for polaroids so we can easily create them dynamically -->
         <div class="project">
-
+          
         </div>
         <div class="project">
 
@@ -95,15 +36,6 @@
         </div>
       </div>
     </div>
-
-    <script type="text/javascript">
-
-      $(document).on('ready', function() {
-        console.log("lol")
-      })
-
-
-    </script>
   </body>
 
 </html>
