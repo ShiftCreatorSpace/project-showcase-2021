@@ -7,14 +7,14 @@ let projects = [
     name: "WeWord",
     author: "Noah Finer",
     description: "Can the Internet crowdsource stories?",
-    url: "https://weword.co",
+    url: "https://medium.com/shiftcreatorspace/can-the-internet-crowdsource-stories-a-story-of-losing-some-hope-regaining-it-then-losing-it-all-97ca9c0bbdaf",
     img: "assets/projects/weword.png",
   },
   {
     name: "Reflect",
     author: "Varun Jindal",
     description: "A quantitative way to reflect on life through a chrome extension!",
-    url: "#",
+    url: "https://medium.com/shiftcreatorspace/reflecting-on-creating-4537e398cca9",
     img: "assets/projects/reflect.png",
   },
   {
@@ -28,28 +28,28 @@ let projects = [
     name: "BrainTrain",
     author: "Ria Bazaz",
     description: "A workout generator that learns off of your workout style",
-    url: "#",
+    url: "https://medium.com/@ria_38953/my-journey-as-a-creator-e5fc520e2818",
     img: "assets/projects/braintrain.jpg",
   },
   {
     name: "healthe",
     author: "Ria Bazaz",
     description: "Improve personal health and the health of the environment",
-    url: "#",
+    url: "https://medium.com/@ria_38953/my-journey-as-a-creator-e5fc520e2818",
     img: "assets/projects/healthe.jpg",
   }, // SHOULD RIA HAVE 2 PICS???
   {
     name: "rcrd",
     author: "Patrick McElroy",
     description: "An app for people to store important information",
-    url: "#",
+    url: "https://medium.com/shiftcreatorspace/building-rcrd-3c8eb5ded9d8",
     img: "assets/projects/rcrd.png", // MAYBE UPDATE THIS
   },
   {
     name: "Melomane",
     author: "Dana Dean",
     description: "Melomane is a platform that creates conversations around music",
-    url: "#",
+    url: "https://medium.com/shiftcreatorspace/no-new-friends-ff730cce4f36",
     img: "assets/projects/melomane.png", // AHH
   },
   {
@@ -63,21 +63,21 @@ let projects = [
     name: "Dangangronpa Engine",
     author: "Adris Jautakas",
     description: "Lets you (easily?) make a Danganronpa game. If you know what Danganronpa is, I'm sorry.",
-    url: "#",
+    url: "https://medium.com/shiftcreatorspace/the-perks-of-being-a-weaboo-798630a69453",
     img: "assets/projects/weeb.png",
   },
   {
     name: "Unmissable",
     author: "Julia Dean",
     description: "Unmissable allows users to find more concerts through friends and following artists/locations",
-    url: "#",
+    url: "https://medium.com/shiftcreatorspace/unmissable-7f797137c31c",
     img: "assets/projects/unmissable.png",
   },
   {
     name: "My Scattered Thoughts in a Form of Art",
     author: "Elizabeth Yang",
     description: "A collection of abstract art pieces/doodles that express the inner workings of what goes on in my head at the time I'm creating",
-    url: "#",
+    url: "https://medium.com/@eeyangg/what-shift-really-taught-me-5f984faaa2f2",
     img: "assets/projects/art.jpg",
   },
   {
@@ -91,15 +91,22 @@ let projects = [
     name: "STEM Kit",
     author: "Sneha Ojha",
     description: "STEM kit to help expose young girls to engineering concepts",
-    url: "#",
+    url: "https://medium.com/@sojha_88489/finding-project-resources-at-michigan-1a8ee23ab9e5",
     img: "assets/projects/stem.png",
   },
   {
     name: "Music Player",
     author: "Sam Hovie",
     description: "A minimalist mp3 player",
-    url: "#",
+    url: "https://medium.com/@samhovie/my-experience-in-shift-f01d0fadbd24",
     img: "assets/projects/mp3.jpg"
+  },
+  {
+    name: "Lichen",
+    author: "Jacob Yoso",
+    description: "A collective, a publication, platform focused on environmental science, art and activism",
+    url: "https://medium.com/shiftcreatorspace/shift-2019-2020-2dd824c667d1",
+    img: "assets/projects/lichen.png"
   }
 
 

@@ -1,6 +1,6 @@
 let lights = `
 <div class="lights-outer">
-  <svg style="margin-left: -5vw" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="2074px"
+  <svg style="margin-left: -8em" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="2074px"
      height="97.27px" viewBox="0 0 2074 97.27" style="enable-background:new 0 0 2074 97.27;" xml:space="preserve">
   <style type="text/css">
     .wire{fill:none;stroke:#000333;stroke-width:2.2208;stroke-miterlimit:10;}

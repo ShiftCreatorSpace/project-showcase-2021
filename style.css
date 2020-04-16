@@ -50,8 +50,8 @@ a {
 }
 
 #main-container {
-  width: 80%;
-  margin: 0 10%;
+  width: 90%;
+  margin: 0 5%;
 }
 
 #intro {
@@ -71,13 +71,13 @@ a {
   animation: draw 1s ease-in forwards;
 }
 
-#intro > img {
-  height: 7rem;
+#intro > a > img {
+  height: 6rem;
 }
 
 .vertical-hr {
   background-color: var(--text-color);
-  height: 5rem;
+  height: 8rem;
   width: 1px;
   margin: 1rem;
 }
@@ -96,6 +96,28 @@ a {
   line-height: 1.1;
 }
 
+#social-media {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 3rem;
+}
+
+#social-media > a > i {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+
+#social-media > a {
+  opacity: 0.8;
+  transition: opacity 0.25s;
+}
+
+#social-media > a:hover {
+  opacity: 1;
+}
+
 #project-display {
   display: flex;
   flex-wrap: wrap;
@@ -110,7 +132,7 @@ a {
   overflow: hidden;
   display: inline-block;
   margin: 2em;
-  width: 18rem;
+  width: 20rem;
   height: auto;
   padding: 1em;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
@@ -145,7 +167,7 @@ a {
 
 .project--image {
   width: 100%;
-  height: 11rem;
+  height: 13rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -212,7 +234,7 @@ a {
   }
 }
 
-@media only screen and (max-width:650px)  {
+@media only screen and (max-width:770px)  {
   #main-container {
     width: 95%;
     margin: 0 2.5%;
@@ -231,6 +253,15 @@ a {
   #intro-right {
     width: 90%;
     text-align: center;
+  }
+
+  #social-media {
+    justify-content: center;
+  }
+
+  #social-media > a > i {
+    font-size: 2rem;
+    margin: 2rem;
   }
 
   #project-display {
