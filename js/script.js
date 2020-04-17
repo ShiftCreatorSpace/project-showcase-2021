@@ -84,7 +84,7 @@ let projects = [
     name: "Sound Shapes",
     author: "Jason Pi",
     description: "Enabling tactile modulation of sound",
-    url: "#",
+    url: "https://medium.com/@jasonpi/sound-shapes-caed5231f148",
     img: "assets/projects/blocks.png",
   },
   {
@@ -107,6 +107,13 @@ let projects = [
     description: "A collective, a publication, platform focused on environmental science, art and activism",
     url: "https://medium.com/shiftcreatorspace/shift-2019-2020-2dd824c667d1",
     img: "assets/projects/lichen.png"
+  },
+  {
+    name: "0hh1",
+    author: "Kaoru Murai",
+    description: "A iOS puzzle game to strategically fill a board with red and blue tiles.",
+    url: "https://medium.com/@kaolugo/a-deceptively-simple-puzzle-game-0hh1-ffe62c801d7d",
+    img: "assets/projects/0hh1.png"
   }
 
 
