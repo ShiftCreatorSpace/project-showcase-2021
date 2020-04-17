@@ -21,7 +21,7 @@ let projects = [
     name: "Wellnest",
     author: "Thomas Searle",
     description: "A guided journaling application focused on mindfulness and wellbeing",
-    url: "#",
+    url: "https://medium.com/@tsearle/crafting-wellnest-49601e8cabc1",
     img: "assets/projects/wellnest.png",
   }, // MAYBE ADD CUSTOM BACKGROUND POSITION
   {
@@ -118,8 +118,8 @@ let getProjectHTML = (project, idx) => {
                               animation-delay: ${idx*0.2}s;
                               transform:
                                 scale(1)
-                                translate(${Math.random()*20-10}px, ${Math.random()*20-10}px)
-                                rotate(${Math.random()*4-2}deg)
+                                translate(0, 0)
+                                rotate(${Math.random()*3-1.5}deg)
                                 ">
       <div class="project--image lazy" style="background-image: url('${project.img}')">
         <i class="fas fa-arrow-right arrow-link"></i>

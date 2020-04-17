@@ -1,13 +1,20 @@
 :root {
   --text-color: #343a40;
   --bg-color: #FFFCF9;
-  --card-color: #fafafa;
+  --card-color: #fdfdfd;
   --accent-color: #4dabf7;
 }
 
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadedown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -59,6 +66,9 @@ a {
   align-items: center;
   justify-content: center;
   padding: 2rem 5rem;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadedown 1s ease 0.2s forwards;
 }
 
 #shift-logo-outer {
@@ -68,7 +78,7 @@ a {
 .st0, .st1, .st3, .st2 {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: draw 1s ease-in forwards;
+  animation: draw 1s ease-in 0.7s forwards;
 }
 
 #intro > a > img {
@@ -141,12 +151,13 @@ a {
   /* max-height: 18rem; */
   margin-bottom: 0rem;
   animation: appear 1s linear forwards;
-  transition: transform 0.25s, max-height 0.25s, margin-bottom 0.25s;
+  transition: transform 0.25s, max-height 0.25s, margin-bottom 0.25s, box-shadow 0.25s;
 }
 
 .project:hover {
   z-index: 100;
-  transform: scale(1.1) rotate(0deg) translate(0, 0) !important;
+  transform: scale(1.05) rotate(0deg) translate(0, -15px) !important;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
   /* max-height: 20rem; */
   /* margin-bottom: -8rem; */
 }
