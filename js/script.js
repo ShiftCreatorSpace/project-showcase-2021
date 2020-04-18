@@ -177,6 +177,13 @@ let projects = [
     description: "Enable Physical Therapists to better understand their time",
     url: "https://medium.com/@jessiesingh7/a-journey-learning-to-create-362999f4bd78",
     img: "assets/projects/pttime.png",
+  },
+  {
+    name: "A Decade Ago",
+    author: "Neil Macasilli-Tan",
+    description: "The best and the worst of investments from 2010 til now",
+    url: "https://medium.com/@nmtan/on-virality-373157796313",
+    img: "assets/projects/adecadeago.png",
   }
 ]
 
