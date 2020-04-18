@@ -111,7 +111,7 @@ let projects = [
   {
     name: "0hh1",
     author: "Kaoru Murai",
-    description: "A iOS puzzle game to strategically fill a board with red and blue tiles.",
+    description: "A iOS puzzle game to strategically fill a board with red and blue tiles",
     url: "https://medium.com/@kaolugo/a-deceptively-simple-puzzle-game-0hh1-ffe62c801d7d",
     img: "assets/projects/0hh1.png"
   },
@@ -152,7 +152,7 @@ let projects = [
   },
   {
     name: "Treenote",
-    author: "Frengjin Cui",
+    author: "Fengjin Cui",
     description: "Visual model for your notes!",
     url: "https://medium.com/@cfengjin/treenote-fbf2a545d23f",
     img: "assets/projects/treenote.png"
@@ -168,8 +168,15 @@ let projects = [
     name: "Maize Days",
     author: "Sanya Verma",
     description: "A podcast to tell stories about student-led organizations",
-    url: "",
+    url: "https://medium.com/@sanyav/maize-days-51cb814c654f",
     img: "assets/projects/maizedays.png"
+  },
+  {
+    name: "PT-Time",
+    author: "Jessie Singh",
+    description: "Enable Physical Therapists to better understand their time",
+    url: "https://medium.com/@jessiesingh7/a-journey-learning-to-create-362999f4bd78",
+    img: "assets/projects/pttime.png",
   }
 ]
 
