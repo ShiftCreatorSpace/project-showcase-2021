@@ -56,9 +56,9 @@ let projects = [
     name: "zoomTV",
     author: "Ryan Lieu",
     description: "TV guide for live events on the internet",
-    url: "#",
+    url: "https://medium.com/shiftcreatorspace/zoomtv-a-story-about-hackathons-and-creative-ruts-603210bfd1d9",
     img: "assets/projects/zoomtv.png",
-  }, // MAYBE ADD BACKGROUND POSITION
+  },
   {
     name: "Dangangronpa Engine",
     author: "Adris Jautakas",
@@ -126,15 +126,50 @@ let projects = [
     name: "Dear World/Us The Humans",
     author: "Abey Noble",
     description: "What does it mean to be human? Well, I try to capture that in brand and blog.",
-    url: "",
+    url: "https://medium.com/@abeython/what-does-it-mean-to-be-human-d25a7c3f00c8",
     img: "assets/projects/dearworld.png",
   },
   {
     name: "Inflow",
     author: "Amar Ramachandran",
     description: "How does information flow through the internet? I set out to find the answers...",
-    url: "",
+    url: "https://medium.com/shiftcreatorspace/inflow-fa0f4009cee5",
     img: "assets/projects/inflow.png",
+  },
+  {
+    name: "Making a Leather Wallet",
+    author: "Eric Zhong",
+    description: "Making a wallet that's built to last - and look better with time",
+    url: "https://medium.com/shiftcreatorspace/making-a-leather-wallet-daefa8e2dfee",
+    img: "assets/projects/wallet.jpg"
+  },
+  {
+    name: "RecTable",
+    author: "Julia Averbuch & Eric Zhong",
+    description: "A data analytics platform for small restaurants to optimize profitability",
+    url: "https://medium.com/shiftcreatorspace/saas-development-4937fb1dbab8",
+    img: "assets/projects/rectable-screenshot.png"
+  },
+  {
+    name: "Treenote",
+    author: "Frengjin Cui",
+    description: "Visual model for your notes!",
+    url: "https://medium.com/@cfengjin/treenote-fbf2a545d23f",
+    img: "assets/projects/treenote.png"
+  },
+  {
+    name: "entry",
+    author: "Wen Si",
+    description: "A social journaling app",
+    url: "https://medium.com/shiftcreatorspace/entry-starting-from-the-ground-up-c41aaa395418",
+    img: "assets/projects/entry-mockups.png"
+  },
+  {
+    name: "Maize Days",
+    author: "Sanya Verma",
+    description: "A podcast to tell stories about student-led organizations",
+    url: "",
+    img: "assets/projects/maizedays.png"
   }
 ]
 
