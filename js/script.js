@@ -114,9 +114,14 @@ let projects = [
     description: "A iOS puzzle game to strategically fill a board with red and blue tiles.",
     url: "https://medium.com/@kaolugo/a-deceptively-simple-puzzle-game-0hh1-ffe62c801d7d",
     img: "assets/projects/0hh1.png"
+  },
+  {
+    name: "A Fly City",
+    author: "Manasvi Parikh",
+    description: "Fly through a 3D modeled city",
+    url: "https://medium.com/@manasvi.parikh3/city-blend-d669db322da2",
+    img: "assets/projects/cityframe.png",
   }
-
-
 ]
 
 let getProjectHTML = (project, idx) => {

@@ -83,6 +83,7 @@ a {
 
 #intro > a > img {
   height: 6rem;
+  cursor: pointer;
 }
 
 .vertical-hr {
@@ -141,8 +142,8 @@ a {
   background-color: var(--card-color);
   overflow: hidden;
   display: inline-block;
-  margin: 2em;
-  width: 20rem;
+  margin: 1em;
+  width: 17rem;
   height: auto;
   padding: 1em;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
@@ -156,7 +157,7 @@ a {
 
 .project:hover {
   z-index: 100;
-  transform: scale(1.05) rotate(0deg) translate(0, -15px) !important;
+  transform: scale(1.05) rotate(0deg) translate(0, -10px) !important;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
   /* max-height: 20rem; */
   /* margin-bottom: -8rem; */
@@ -178,7 +179,7 @@ a {
 
 .project--image {
   width: 100%;
-  height: 13rem;
+  height: 11rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -209,7 +210,7 @@ a {
 }
 
 .project--text > p {
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 
 .wire {
@@ -221,7 +222,6 @@ a {
 .lights {
   opacity: 0;
   stroke-dasharray:1px,300px;
-  filter: drop-shadow(10px 0 5px red);
   animation: dash 3s linear infinite, appear 2s linear forwards;
 }
 
@@ -259,6 +259,14 @@ a {
   .vertical-hr {
     height: 1px;
     width: 60%;
+  }
+
+  .project {
+    width: 20rem;
+  }
+
+  .project--image {
+    height: 13rem;
   }
 
   #intro-right {
