@@ -190,7 +190,7 @@ a {
 }
 
 .lazy {
-  background-image: none !important;
+  background-image: url('assets/projects/transparent.png') !important;
 }
 
 .project--text {

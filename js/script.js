@@ -106,7 +106,7 @@ let projects = [
     author: "Jacob Yoso",
     description: "A collective, a publication, platform focused on environmental science, art and activism",
     url: "https://medium.com/shiftcreatorspace/shift-2019-2020-2dd824c667d1",
-    img: "assets/projects/lichen.png"
+    img: "assets/projects/lichen.jpeg"
   },
   {
     name: "0hh1",
