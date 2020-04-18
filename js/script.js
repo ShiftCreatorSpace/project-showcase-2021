@@ -121,6 +121,20 @@ let projects = [
     description: "Fly through a 3D modeled city",
     url: "https://medium.com/@manasvi.parikh3/city-blend-d669db322da2",
     img: "assets/projects/cityframe.png",
+  },
+  {
+    name: "Dear World/Us The Humans",
+    author: "Abey Noble",
+    description: "What does it mean to be human? Well, I try to capture that in brand and blog.",
+    url: "",
+    img: "assets/projects/dearworld.png",
+  },
+  {
+    name: "Inflow",
+    author: "Amar Ramachandran",
+    description: "How does information flow through the internet? I set out to find the answers...",
+    url: "",
+    img: "assets/projects/inflow.png",
   }
 ]
 
