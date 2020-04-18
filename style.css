@@ -191,6 +191,7 @@ a {
 
 .lazy {
   background-image: url('assets/projects/transparent.png') !important;
+  transition: background-image 0.25s;
 }
 
 .project--text {
