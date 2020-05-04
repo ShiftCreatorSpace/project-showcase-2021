@@ -9,6 +9,7 @@ let projects = [
     description: "Can the Internet crowdsource stories?",
     url: "https://medium.com/shiftcreatorspace/can-the-internet-crowdsource-stories-a-story-of-losing-some-hope-regaining-it-then-losing-it-all-97ca9c0bbdaf",
     img: "assets/projects/weword.png",
+    tag: "published",
   },
   {
     name: "Reflect",
@@ -16,6 +17,7 @@ let projects = [
     description: "A quantitative way to reflect on life through a chrome extension!",
     url: "https://medium.com/shiftcreatorspace/reflecting-on-creating-4537e398cca9",
     img: "assets/projects/reflect.png",
+    tag: "completed",
   },
   {
     name: "Wellnest",
@@ -23,6 +25,7 @@ let projects = [
     description: "A guided journaling application focused on mindfulness and wellbeing",
     url: "https://medium.com/@tsearle/crafting-wellnest-49601e8cabc1",
     img: "assets/projects/wellnest.png",
+    tag: "published",
   }, // MAYBE ADD CUSTOM BACKGROUND POSITION
   {
     name: "BrainTrain",
@@ -30,6 +33,7 @@ let projects = [
     description: "A workout generator that learns off of your workout style",
     url: "https://medium.com/@ria_38953/my-journey-as-a-creator-e5fc520e2818",
     img: "assets/projects/braintrain.jpg",
+    tag: "completed",
   },
   {
     name: "healthe",
@@ -37,6 +41,7 @@ let projects = [
     description: "Improve personal health and the health of the environment",
     url: "https://medium.com/@ria_38953/my-journey-as-a-creator-e5fc520e2818",
     img: "assets/projects/healthe.jpg",
+    tag: "wip",
   }, // SHOULD RIA HAVE 2 PICS???
   {
     name: "rcrd",
@@ -44,6 +49,7 @@ let projects = [
     description: "An app for people to store important information",
     url: "https://medium.com/shiftcreatorspace/building-rcrd-3c8eb5ded9d8",
     img: "assets/projects/rcrd.png", // MAYBE UPDATE THIS
+    tag: "wip",
   },
   {
     name: "Melomane",
@@ -51,6 +57,7 @@ let projects = [
     description: "Melomane is a platform that creates conversations around music",
     url: "https://medium.com/shiftcreatorspace/no-new-friends-ff730cce4f36",
     img: "assets/projects/melomane.png", // AHH
+    tag: "completed",
   },
   {
     name: "zoomTV",
@@ -58,6 +65,7 @@ let projects = [
     description: "TV guide for live events on the internet",
     url: "https://medium.com/shiftcreatorspace/zoomtv-a-story-about-hackathons-and-creative-ruts-603210bfd1d9",
     img: "assets/projects/zoomtv.png",
+    tag: "completed",
   },
   {
     name: "Dangangronpa Engine",
@@ -65,6 +73,7 @@ let projects = [
     description: "Lets you (easily?) make a Danganronpa game. If you know what Danganronpa is, I'm sorry.",
     url: "https://medium.com/shiftcreatorspace/the-perks-of-being-a-weaboo-798630a69453",
     img: "assets/projects/weeb.png",
+    tag: "wip",
   },
   {
     name: "Unmissable",
@@ -72,6 +81,7 @@ let projects = [
     description: "Unmissable allows users to find more concerts through friends and following artists/locations",
     url: "https://medium.com/shiftcreatorspace/unmissable-7f797137c31c",
     img: "assets/projects/unmissable.png",
+    tag: "completed",
   },
   {
     name: "My Scattered Thoughts in a Form of Art",
@@ -79,6 +89,7 @@ let projects = [
     description: "A collection of abstract art pieces/doodles that express the inner workings of what goes on in my head at the time I'm creating",
     url: "https://medium.com/@eeyangg/what-shift-really-taught-me-5f984faaa2f2",
     img: "assets/projects/art.jpg",
+    tag: "completed",
   },
   {
     name: "Sound Shapes",
@@ -86,6 +97,7 @@ let projects = [
     description: "Enabling tactile modulation of sound",
     url: "https://medium.com/@jasonpi/sound-shapes-caed5231f148",
     img: "assets/projects/blocks.png",
+    tag: "completed",
   },
   {
     name: "STEM Kit",
@@ -93,27 +105,31 @@ let projects = [
     description: "STEM kit to help expose young girls to engineering concepts",
     url: "https://medium.com/@sojha_88489/finding-project-resources-at-michigan-1a8ee23ab9e5",
     img: "assets/projects/stem.png",
+    tag: "wip",
   },
   {
     name: "Music Player",
     author: "Sam Hovie",
     description: "A minimalist mp3 player",
     url: "https://medium.com/@samhovie/my-experience-in-shift-f01d0fadbd24",
-    img: "assets/projects/mp3.jpg"
+    img: "assets/projects/mp3.jpg",
+    tag: "wip",
   },
   {
     name: "Lichen",
     author: "Jacob Yoso",
     description: "A collective, a publication, platform focused on environmental science, art and activism",
     url: "https://medium.com/shiftcreatorspace/shift-2019-2020-2dd824c667d1",
-    img: "assets/projects/lichen.jpeg"
+    img: "assets/projects/lichen.jpeg",
+    tag: "wip",
   },
   {
     name: "0hh1",
     author: "Kaoru Murai",
     description: "A iOS puzzle game to strategically fill a board with red and blue tiles",
     url: "https://medium.com/@kaolugo/a-deceptively-simple-puzzle-game-0hh1-ffe62c801d7d",
-    img: "assets/projects/0hh1.png"
+    img: "assets/projects/0hh1.png",
+    tag: "completed",
   },
   {
     name: "A Fly City",
@@ -121,6 +137,7 @@ let projects = [
     description: "Fly through a 3D modeled city",
     url: "https://medium.com/@manasvi.parikh3/city-blend-d669db322da2",
     img: "assets/projects/cityframe.png",
+    tag: "completed",
   },
   {
     name: "Dear World/Us The Humans",
@@ -128,6 +145,7 @@ let projects = [
     description: "What does it mean to be human? Well, I try to capture that in brand and blog.",
     url: "https://medium.com/@abeython/what-does-it-mean-to-be-human-d25a7c3f00c8",
     img: "assets/projects/dearworld.png",
+    tag: "published",
   },
   {
     name: "Inflow",
@@ -135,41 +153,47 @@ let projects = [
     description: "How does information flow through the internet? I set out to find the answers...",
     url: "https://medium.com/shiftcreatorspace/inflow-fa0f4009cee5",
     img: "assets/projects/inflow.png",
+    tag: "published",
   },
   {
     name: "Making a Leather Wallet",
     author: "Eric Zhong",
     description: "Making a wallet that's built to last - and look better with time",
     url: "https://medium.com/shiftcreatorspace/making-a-leather-wallet-daefa8e2dfee",
-    img: "assets/projects/wallet.jpg"
+    img: "assets/projects/wallet.jpg",
+    tag: "completed",
   },
   {
     name: "RecTable",
     author: "Julia Averbuch & Eric Zhong",
     description: "A data analytics platform for small restaurants to optimize profitability",
     url: "https://medium.com/shiftcreatorspace/saas-development-4937fb1dbab8",
-    img: "assets/projects/rectable-screenshot.png"
+    img: "assets/projects/rectable-screenshot.png",
+    tag: "published",
   },
   {
     name: "Treenote",
     author: "Fengjin Cui",
     description: "Visual model for your notes!",
     url: "https://medium.com/@cfengjin/treenote-fbf2a545d23f",
-    img: "assets/projects/treenote.png"
+    img: "assets/projects/treenote.png",
+    tag: "wip",
   },
   {
     name: "entry",
     author: "Wen Si",
     description: "A social journaling app",
     url: "https://medium.com/shiftcreatorspace/entry-starting-from-the-ground-up-c41aaa395418",
-    img: "assets/projects/entry-mockups.png"
+    img: "assets/projects/entry-mockups.png",
+    tag: "wip",
   },
   {
     name: "Maize Days",
     author: "Sanya Verma",
     description: "A podcast to tell stories about student-led organizations",
     url: "https://medium.com/@sanyav/maize-days-51cb814c654f",
-    img: "assets/projects/maizedays.png"
+    img: "assets/projects/maizedays.png",
+    tag: "wip",
   },
   {
     name: "PT-Time",
@@ -177,6 +201,7 @@ let projects = [
     description: "Enable Physical Therapists to better understand their time",
     url: "https://medium.com/@jessiesingh7/a-journey-learning-to-create-362999f4bd78",
     img: "assets/projects/pttime.png",
+    tag: "wip",
   },
   {
     name: "A Decade Ago",
@@ -184,8 +209,9 @@ let projects = [
     description: "The best and the worst of investments from 2010 til now",
     url: "https://medium.com/@nmtan/on-virality-373157796313",
     img: "assets/projects/adecadeago.png",
+    tag: "published",
   }
-]
+];
 
 let getProjectHTML = (project, idx) => {
   return `
@@ -205,10 +231,11 @@ let getProjectHTML = (project, idx) => {
         <h4>${project.name}</h4>
         <h5>${project.author}</h5>
         <p>${project.description}</p>
+        ${(project.tag === "published" || project.tag === "completed") ? "<span class='tag'>"+project.tag+"</span>" : ""}
       </div>
     </a>
-  `
-}
+  `;
+};
 
 function lazyLoad() {
   let scroll = $(window).scrollTop() + window.innerHeight;
@@ -216,7 +243,7 @@ function lazyLoad() {
     if($(this).offset().top <= scroll) {
       $(this).removeClass("lazy");
     }
-  })
+  });
 }
 
 // in place shuffling
@@ -232,6 +259,19 @@ function shuffle(a) {
 $(document).ready(function() {
   $(window).scroll(lazyLoad);
   shuffle(projects);
+
+  // sort projects by tags
+  // const tagOrder = ["published", "completed", "wip"];
+
+  // projects.sort((a, b) => {
+  //   const aIdx = tagOrder.indexOf(a.tag);
+  //   const bIdx = tagOrder.indexOf(b.tag);
+  //   if(aIdx < bIdx) {
+  //     return -1;
+  //   } else {
+  //     return 1;
+  //   }
+  // });
 
   projects.forEach((project, idx) => {
     $("#project-display").append(getProjectHTML(project, idx));

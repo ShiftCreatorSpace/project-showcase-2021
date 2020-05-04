@@ -212,6 +212,19 @@ a {
 
 .project--text > p {
   margin: 0.3rem 0;
+  margin-bottom: 0.8rem;
+}
+
+.tag {
+  color: #fff;
+  background-color: #000;
+  opacity: 0.25;
+  top: 1rem;
+  font-size: 0.6rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
 .wire {
