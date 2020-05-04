@@ -230,8 +230,8 @@ let getProjectHTML = (project, idx) => {
       <div class="project--text">
         <h4>${project.name}</h4>
         <h5>${project.author}</h5>
-        <p>${project.description}</p>
-        ${(project.tag === "published" || project.tag === "completed") ? "<span class='tag'>"+project.tag+"</span>" : ""}
+        <p style="/*${(project.tag === "published" || project.tag === "completed") ? "margin-bottom: 0.8rem;" : ""}*/">${project.description}</p>
+        <!--${(project.tag === "published" || project.tag === "completed") ? "<span class='tag'>"+project.tag+"</span>" : ""}-->
       </div>
     </a>
   `;
@@ -261,17 +261,17 @@ $(document).ready(function() {
   shuffle(projects);
 
   // sort projects by tags
-  // const tagOrder = ["published", "completed", "wip"];
+  const tagOrder = ["published", "completed", "wip"];
 
-  // projects.sort((a, b) => {
-  //   const aIdx = tagOrder.indexOf(a.tag);
-  //   const bIdx = tagOrder.indexOf(b.tag);
-  //   if(aIdx < bIdx) {
-  //     return -1;
-  //   } else {
-  //     return 1;
-  //   }
-  // });
+  projects.sort((a, b) => {
+    const aIdx = tagOrder.indexOf(a.tag);
+    const bIdx = tagOrder.indexOf(b.tag);
+    if(aIdx < bIdx) {
+      return -1;
+    } else {
+      return 1;
+    }
+  });
 
   projects.forEach((project, idx) => {
     $("#project-display").append(getProjectHTML(project, idx));
