@@ -214,18 +214,37 @@ let projects = [
 ];
 
 let getProjectHTML = (project, idx) => {
+  const getShape = () => {
+    const type = ['rect', 'circle', 'diag', 'line'][Math.floor(Math.random()*4)];
+    const topOffset = Math.random()*4 + 1 + "rem";
+    const leftOffset = (Math.random()*11 + 3) + "rem";
+    const direction1 = "bottom";
+    const direction2 = Math.random() > 0.5 ? "left" : "right";
+    return {
+      type,
+      topOffset,
+      leftOffset,
+      direction1,
+      direction2,
+    };
+  };
+
+  shape1 = getShape();
+  shape2 = getShape();
+  shape3 = getShape();
+
   return `
-    <a href="${project.url}" target="_blank" class="project" style="
+    <a href="${project.url}" target="_blank" class="project" id="project-${idx}" style="
                               animation-delay: ${idx*0.2}s;
                               transform:
-                                scale(1)
-                                translate(0, 0)
-                                rotate(${Math.random()*3-1.5}deg)
+                              scale(1)
+                              translate(0, 0)
                                 ">
-      <div class="project--image lazy" style="background-image: url('${project.img}')">
-        <i class="fas fa-arrow-right arrow-link"></i>
+      <div class="project--gradient">
+        <span class="project--gradient__span"></span>
       </div>
-
+      <div class="project--image lazy" style="background-image: url('${project.img}')">
+      </div>
 
       <div class="project--text">
         <h4>${project.name}</h4>
@@ -233,8 +252,23 @@ let getProjectHTML = (project, idx) => {
         <p style="/*${(project.tag === "published" || project.tag === "completed") ? "margin-bottom: 0.8rem;" : ""}*/">${project.description}</p>
         <!--${(project.tag === "published" || project.tag === "completed") ? "<span class='tag'>"+project.tag+"</span>" : ""}-->
       </div>
+      <div class="shape ${shape1.type}" style="${shape1.direction1}: ${shape1.topOffset}; ${shape1.direction2}: ${shape1.leftOffset}"></div>
+      <div class="shape ${shape2.type}" style="${shape2.direction1}: ${shape2.topOffset}; ${shape2.direction2}: ${shape2.leftOffset}"></div>
+      <div class="shape ${shape3.type}" style="${shape3.direction1}: ${shape3.topOffset}; ${shape3.direction3}: ${shape3.leftOffset}"></div>
     </a>
   `;
+};
+
+const getUpperShape = (idx) => {
+  if(!idx) idx = Math.floor(Math.random()*5);
+  const type = ['rect', 'circle', 'diag', 'window', 'window'][idx];
+  const top = Math.random()*20 - 10 + "rem";
+  const left = (Math.random()*110 - 15) + "%";
+  const delay = -Math.random()*5 + "s";
+  return `
+    <div class="upper-shape ${type}" style="top: ${top}; left: ${left}; animation-delay: ${delay};"></div>
+  `;
+
 };
 
 function lazyLoad() {
@@ -276,5 +310,31 @@ $(document).ready(function() {
   projects.forEach((project, idx) => {
     $("#project-display").append(getProjectHTML(project, idx));
   });
+
   lazyLoad();
-})
+
+  $(".project").on('mousemove', function(e){    
+      const target = $(this);
+      if(!target) return false;
+
+      const offset = target.offset();
+
+      if(offset) {
+        let xAxis = (e.pageX - offset.left - target.width()/2) / 8;
+        let yAxis = (e.pageY - offset.top - target.height()/2) / 10;
+  
+        target.css("transform", `rotateY(${-xAxis}deg) rotateX(${yAxis}deg) scale3d(1.1, 1.1, 1.1)`);
+
+        const gradient = $(this).find(".project--gradient__span");
+        gradient.css("transform", `scale(2) translateX(${-xAxis*3}px) translateY(${yAxis*3}px) translateZ(100px)`);
+      }
+  });
+  $(".project").mouseleave(function(e) {
+    $(this).css("transform", "rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)");
+  });
+
+
+  for(let i = 0; i < 20; i++) {
+    $("#upper-shapes").append(getUpperShape(i % 5));
+  }
+});

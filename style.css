@@ -1,8 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
+
 :root {
-  --text-color: #343a40;
-  --bg-color: #FFFCF9;
-  --card-color: #fdfdfd;
+  --text-color: #212529;
+  --bg-color: #ffffff;
+  --card-color: rgba(255, 255, 255, 0.7);
   --accent-color: #4dabf7;
+  --red: #E45E51;
+  --blue: #5AB2CE;
+  --orange: #E99852;
+  --green: #74CA6D;
+}
+
+body {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+#box{
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  background: #aaa;
 }
 
 @keyframes draw {
@@ -30,6 +48,15 @@
   }
   50% {
     stroke-opacity: 0.2;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px)
+  }
+  50% {
+    transform: translateY(50px)
   }
 }
 
@@ -98,13 +125,15 @@ a {
 }
 
 #intro-right > h2 {
-  font-size: 3em;
-  font-family: "Lora", serif;
+  font-size: 2.5em;
+  font-family: "IBM Plex Mono", serif;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
 }
 
 #intro-right > p {
   font-size: 1.25em;
   line-height: 1.1;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
 }
 
 #social-media {
@@ -138,55 +167,94 @@ a {
   margin-bottom: 10rem;
 }
 
+.project--gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translateZ(1px);
+  overflow: hidden;
+}
+
+.project--gradient > span {
+  z-index: 10000;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 60%);
+  /* background-color: green; */
+}
+
 .project {
   background-color: var(--card-color);
-  overflow: hidden;
   display: inline-block;
-  margin: 1em;
+  margin: 1.5em;
+  overflow: hidden;
   width: 17rem;
   height: auto;
-  padding: 1em;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
   transform-origin: 50% 50%;
   opacity: 0;
   /* max-height: 18rem; */
   margin-bottom: 0rem;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   animation: appear 1s linear forwards;
-  transition: transform 0.25s, max-height 0.25s, margin-bottom 0.25s, box-shadow 0.25s;
+  transition: transform 0.15s, box-shadow 0.25s;
 }
 
 .project:hover {
-  z-index: 100;
-  transform: scale(1.05) rotate(0deg) translate(0, -10px) !important;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-  /* max-height: 20rem; */
-  /* margin-bottom: -8rem; */
-}
-
-.arrow-link {
-  position: absolute !important;
-  bottom: 1rem;
-  right: 1rem;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  background-color: var(--card-color);
-  width: 2rem;
-  height: 2rem;
-  text-align: center;
-  line-height: 2rem;
-  font-size: 1.25em;
-  border-radius: 100%;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project--image {
   width: 100%;
   height: 11rem;
+  z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
   background-color: var(--card-color);
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  transition: background-image: 0.25s;
+  transition: background-image 0.25s;
+}
+
+.shape {
+  z-index: -1;
+  position: absolute;
+}
+
+.shape.rect {
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--red);
+  transform: translateZ(-10px);
+}
+
+.shape.circle {
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--green);
+  border-radius: 100%;
+  transform: translateZ(-30px);
+}
+
+.shape.diag {
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--blue);
+  transform: skew(20deg) translateZ(-20px);
+}
+
+.shape.line {
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--orange);
+  transform: translateZ(-40px);
 }
 
 .lazy {
@@ -195,23 +263,47 @@ a {
 }
 
 .project--text {
-  margin-top: 0.25rem;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  padding: 0.75rem 1rem;
+  background-color: var(--card-color);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  -moz-backdrop-filter: blur(15px);
+}
+
+.project--text > * {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 .project--text > h4 {
-  font-size: 2em;
-  font-family: "Lora", serif;
+  font-size: 1.5em;
+  transform: translateZ(22.5px);
+  font-family: "IBM Plex Mono", serif;
+  text-shadow: 0px 0px 10px transparent;
+  transition: text-shadow 0.25s;
 }
 
 .project--text > h5 {
   text-transform: uppercase;
   opacity: 0.7;
   margin-top: 0.1em;
+  transform: translateZ(18px);
   font-size: 1em;
+  text-shadow: 0px 0px 10px transparent;
+  transition: text-shadow 0.25s;
 }
 
 .project--text > p {
   margin: 0.3rem 0;
+  transform: translateZ(5px);
+}
+
+.project:hover h4, .project:hover h5 {
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .tag {
@@ -226,26 +318,55 @@ a {
   font-weight: 900;
 }
 
-.wire {
-  stroke-dasharray: 2000;
-  stroke-dashoffset: 2000;
-  animation: draw 1s ease-in forwards;
-}
-
-.lights {
+#upper-shapes {
+  width: 100%;
+  height: 10rem;
   opacity: 0;
-  stroke-dasharray:1px,300px;
-  animation: dash 3s linear infinite, appear 2s linear forwards;
+  transform: translateY(-50px);
+  animation: fadedown 3s ease 0.2s forwards;
 }
 
-#lights1 {
-  animation-delay: 1s;
-  stroke-dashoffset: 100px;
+.upper-shape {
+  position: absolute;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  animation: float 10s ease infinite;
 }
 
-#lights2 {
-  animation-delay: 2s;
-  stroke-dashoffset: 200px;
+.upper-shape.rect {
+  height: 5rem;
+  width: 10rem;
+  border-radius: 5px;
+  background-color: var(--red);
+}
+
+.upper-shape.circle {
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--green);
+  border-radius: 100%;
+}
+
+.upper-shape.diag {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 5px;
+  background-color: var(--blue);
+}
+
+.upper-shape.line {
+  height: 10rem;
+  width: 5rem;
+  background-color: var(--orange);
+}
+
+.upper-shape.window {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 5px;
+  z-index: 100;
+  margin-top: 60px;
+  backdrop-filter: blur(10px);
+  background-color: var(--card-color);
 }
 
 @media only screen and (max-width:1300px) {
