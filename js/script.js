@@ -234,6 +234,7 @@ let getProjectHTML = (project, idx) => {
   shape3 = getShape();
 
   return `
+  <div class="projectouter">
     <a href="${project.url}" target="_blank" class="project" id="project-${idx}" style="
                               animation-delay: ${idx*0.2}s;
                               transform:
@@ -256,6 +257,7 @@ let getProjectHTML = (project, idx) => {
       <div class="shape ${shape2.type}" style="${shape2.direction1}: ${shape2.topOffset}; ${shape2.direction2}: ${shape2.leftOffset}"></div>
       <div class="shape ${shape3.type}" style="${shape3.direction1}: ${shape3.topOffset}; ${shape3.direction3}: ${shape3.leftOffset}"></div>
     </a>
+  </div>
   `;
 };
 
@@ -313,8 +315,8 @@ $(document).ready(function() {
 
   lazyLoad();
 
-  $(".project").on('mousemove', function(e){    
-      const target = $(this);
+  $(".projectouter").on('mousemove', function(e){    
+      const target = $(this).find(".project");
       if(!target) return false;
 
       const offset = target.offset();
@@ -326,11 +328,11 @@ $(document).ready(function() {
         target.css("transform", `rotateY(${-xAxis}deg) rotateX(${yAxis}deg) scale3d(1.1, 1.1, 1.1)`);
 
         const gradient = $(this).find(".project--gradient__span");
-        gradient.css("transform", `scale(2) translateX(${-xAxis*3}px) translateY(${yAxis*3}px) translateZ(100px)`);
+        gradient.css("transform", `scale(2) translateX(${-xAxis*3}px) translateY(${yAxis*3}px)`);
       }
   });
-  $(".project").mouseleave(function(e) {
-    $(this).css("transform", "rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)");
+  $(".projectouter").mouseleave(function(e) {
+    $(this).find(".project").css("transform", "rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)");
   });
 
 
