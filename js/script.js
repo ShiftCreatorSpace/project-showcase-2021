@@ -1,7 +1,3 @@
-//TODO: generate lights in background
-
-// note: pictures should have a width of ~500px, height auto
-
 let projects = [
   {
     name: "Generative Art",
@@ -88,7 +84,7 @@ let projects = [
     author: "Meera Kumar",
     description: "SHIFT-wide book club to foster discussion, debate and learning",
     url: "https://meerak5000.medium.com/eggsplaining-my-freshman-year-ed7d20ef0fad",
-    img: "assets/projects/octoclock.png",
+    img: "assets/projects/books.jpg",
     tag: "published",
   },
   {
@@ -161,6 +157,30 @@ let projects = [
     description: "Turning drinking into a full time job ",
     url: "https://medium.com/shiftcreatorspace/wishly-pan-rack-x-bottling-co-f64353da33c5",
     img: "assets/projects/alc.jpg",
+    tag: "published",
+  },
+  {
+    name: "Light-Up Focus Tree",
+    author: "Hope Mao",
+    description: "Product design and development - from concept to production",
+    url: "https://hopemao.medium.com/product-development-during-the-covid-pandemic-light-up-focus-tree-14a55bc7b14",
+    img: "assets/projects/tree.jpg",
+    tag: "published",
+  },
+  {
+    name: "Earth Passport",
+    author: "Nehema Kariuki",
+    description: "An exploration in design for education and sustainability",
+    url: "https://nehema.medium.com/earth-passport-an-exploration-in-design-for-education-and-sustainability-32e1edf358f6",
+    img: "assets/projects/earth.png",
+    tag: "published",
+  },
+  {
+    name: "The Levitating Chair",
+    author: "Colter Korsmoe",
+    description: "Experimenting with tensegrity-based chairs and designs",
+    url: "https://ckorsmoe.medium.com/the-levitating-chair-59452ca96d09",
+    img: "assets/projects/tense.png",
     tag: "published",
   },
 ];
