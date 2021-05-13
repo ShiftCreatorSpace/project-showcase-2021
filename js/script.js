@@ -124,7 +124,7 @@ let projects = [
     author: "Zan Huang",
     description: "Imagist music for solo clarinet and narrator",
     url: "https://zan-huang.medium.com/fully-decentralized-social-media-network-and-thirteen-way-1fc9cb4e4382",
-    img: "assets/projects/squirrels.png",
+    img: "assets/projects/music.png",
     tag: "published",
   },
   {
